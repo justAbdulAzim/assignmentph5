@@ -126,7 +126,7 @@ section.second {
     gap: 20px;
     max-width: 1300px;
     margin: 0 auto;
-    padding:50px 20px;
+    padding: 50px 20px;
 
 }
 
@@ -162,6 +162,10 @@ section.second {
     margin-right: 15px;
 }
 
+.service-icon img {
+    width: 22px;
+}
+
 .red-icon {
     background: linear-gradient(135deg, #fee2e2, #fecaca);
 }
@@ -170,19 +174,12 @@ section.second {
     background: linear-gradient(135deg, #dbeafe, #bfdbfe);
 }
 
-.pink-icon {
-    background: linear-gradient(135deg, #fce7f3, #f9a8d4);
-}
-
-.orange-icon {
-    background: linear-gradient(135deg, #fed7aa, #fdba74);
-}
-
 .service-title {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     color: #1f2937;
     margin-bottom: 4px;
+    font-family: "Noto Serif Bengali", serif;
 }
 
 .service-subtitle {
@@ -193,7 +190,8 @@ section.second {
 .favorite-icon {
     color: #d1d5db;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 30px;
+    justify-self: end;
 }
 
 .favorite-icon:hover {
@@ -201,7 +199,7 @@ section.second {
 }
 
 .service-number {
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 700;
     color: #1f2937;
     margin: 10px 0;
@@ -236,7 +234,7 @@ section.second {
 }
 
 .call-btn {
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: #00a63e;
     border: none;
     color: white;
     padding: 8px 16px;
@@ -244,11 +242,10 @@ section.second {
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s;
 }
 
 .call-btn:hover {
-    background: linear-gradient(135deg, #059669, #047857);
+    background: linear-gradient(135deg, #10b981, #059669);
 }
 
 .sidebar {
@@ -283,13 +280,17 @@ section.second {
 }
 
 .clear-btn {
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: #00a63e;
     color: white;
     border: none;
-    padding: 6px 12px;
-    border-radius: 6px;
+    padding: 10px 17px;
+    border-radius: 15px;
     font-size: 12px;
     cursor: pointer;
+}
+
+.clear-btn:hover {
+    background: linear-gradient(135deg, #10b981, #059669);
 }
 
 .history-item {
@@ -309,6 +310,7 @@ section.second {
     font-weight: 500;
     color: #1f2937;
     margin-bottom: 2px;
+    font-family: "Noto Serif Bengali", serif;
 }
 
 .history-number {
