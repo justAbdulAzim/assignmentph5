@@ -1,5 +1,110 @@
-*{
-    margin:0;
-    padding:0;
-    text-decoration: none;   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* ******************** */
+/* header section style */
+/* ******************** */
+
+.header {
+    background-color: white;
+    padding: 15px 30px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.logo-icon {
+    width: 140px;
+}
+
+.stats-section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 25px;
+    justify-self: end;
+}
+
+.stat-item {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: rgba(123, 241, 168,.4);
+    padding: 7px 16px;
+    border-radius: 16px;
+    transition: .3s;
+    text-align: center;
+    width: 75px;
+}
+
+img.heart-icon,.coin-icon {
+    width: 18px;
+}
+
+
+.copy-button {
+    background: #00a63e;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover, .copy-button:hover {
+    background: #00ff00;
+    cursor: pointer;
+}
+
+
+/* ************** */
+/* banner section */
+/* ************** */
+
+
+.main-banner {
+    background: linear-gradient(135deg, #1b4332, #2d5a3d);
+    color: white;
+    padding: 60px 30px;
+    width: 100%;
+}
+
+
+.banner-content {
+    text-align: center;
+    max-width: 1200;
+}
+
+.banner-logo{
+    width: 65px;
+}
+.main-text{
+    font-size: 36px;
+    font-family: "Noto Serif Bengali", serif;
+}
+.english-text{
+    font-size: 14px;
+    font-family: "Noto Serif Bengali", serif;
 }
