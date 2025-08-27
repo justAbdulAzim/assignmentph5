@@ -17,6 +17,23 @@ function formatTime() {
     return hours + ':' + minutes + ':' + seconds + ' ' + ampm;
 }
 
+// Function to get current balance
+function getBalance() {
+    const balanceElement = document.querySelector('#balance');
+    if (balanceElement) {
+        return parseInt(balanceElement.textContent) || 0;
+    }
+    return 0;
+}
+
+// Function to update balance
+function updateBalance(newBalance) {
+    const balanceElement = document.querySelector('#balance');
+    if (balanceElement) {
+        balanceElement.textContent = newBalance;
+    }
+}
+
 // Function to add history item
 function addHistoryItem(serviceName, serviceNumber) {
     const sidebar = document.querySelector('.sidebar');
@@ -52,12 +69,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const callButtons = document.querySelectorAll('.call-btn');
     callButtons.forEach(button => {
         button.addEventListener('click', function() {
+            // Get current balance
+            const currentBalance = getBalance();
+            
+            // Check if balance is more than 20
+            if (currentBalance < 20) {
+                alert("Not enough coin");
+                return;
+            }
+            
             // Find the parent service card
             const serviceCard = this.closest('.service-card');
             
-            // Get service title and number
+            // Get service title, subtitle, and number
             const serviceName = serviceCard.querySelector('.service-title').textContent;
+            const serviceSubtitle = serviceCard.querySelector('.service-subtitle').textContent;
             const serviceNumber = serviceCard.querySelector('.service-number').textContent;
+            
+            // Show calling alert
+            alert(`Calling ${serviceSubtitle} ${serviceNumber}...`);
+            
+            // Deduct 20 coins from balance
+            updateBalance(currentBalance - 20);
             
             // Add to history
             addHistoryItem(serviceName, serviceNumber);
